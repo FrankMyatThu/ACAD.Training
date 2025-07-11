@@ -1,0 +1,5 @@
+(defun c:AUTOCOUNT () 
+  (setq POINT (getpoint "\nSelect point for counter: ")) 
+  (command "text" POINT 6 0 "test 1")
+  (princ)
+)
