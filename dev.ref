@@ -1,0 +1,21 @@
+how to create ssh key to use personal github{
+    Generate a Dedicated SSH Key for Personal GitHub:
+        ssh-keygen -t rsa -b 4096 -C "myatthu1986@gmail.com" -f ~/.ssh/id_rsa_github_personal
+
+    Copy the Public Key: Display the content of your newly generated public key:
+        cat ~/.ssh/id_rsa_github_personal.pub
+
+    Go to GitHub: Log in to your personal GitHub account in your web browser.
+    Add SSH Key: Navigate to Settings > SSH and GPG keys. Click "New SSH key" (or "Add SSH key").
+    Paste Key
+}
+
+how to access {
+    Start SSH Agent:
+        eval "$(ssh-agent -s)"
+
+    Add Personal GitHub SSH Key:
+        ssh-add ~/.ssh/id_rsa_github_personal
+
+        git fetch origin master
+}
